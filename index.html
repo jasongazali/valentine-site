@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="vie
+  wport" content="width=device-width,initial-scale=1" />
   <title>Will you be my Valentine? 💘</title>
   <style>
     :root { --bg1:#ffe4ee; --bg2:#fff6fb; --ink:#2a1b2a; --yes:#ff4d88; --no:#6b7280; }
@@ -55,6 +56,34 @@
       border: 1px solid rgba(255,77,136,.25);
       font-size: 14px;
     }
+
+    /* Photo gallery (shows after clicking YES) */
+    .gallery{
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        padding: 12px 6px 18px;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .gallery img{
+        flex: 0 0 85%;
+        max-width: 520px;
+        height: 260px;            /* consistent size */
+        border-radius: 18px;
+        object-fit: contain;      /* IMPORTANT: no cropping */
+        /*background: rgba(0,0,0,.04);*/
+        background: linear-gradient(135deg, #ffe4ee, #fff6fb);
+        box-shadow: 0 12px 30px rgba(0,0,0,.18);
+        scroll-snap-align: center
+    }
+    
+    .caption{
+        margin-top: 8px;
+        font-size: 16px;
+        opacity: .85;
+}
+
   </style>
 </head>
 <body>
@@ -122,9 +151,9 @@
         <p><strong>Date idea:</strong> ${pickIdea()}</p>
 
         <div class="gallery">
-            <img src="/Users/jasonrichard/Downloads/FullSizeRender.HEIC" alt="us">
-            <img src="/Users/jasonrichard/Downloads/IMG_6630.HEIC" alt="us">
-            <img src="/Users/jasonrichard/Downloads/IMG_1310.HEIC" alt="us">
+            <img src="./photos/us1.jpg" alt="us">
+            <img src="./photos/us2.jpg" alt="us">
+            <img src="./photos/us3.jpg" alt="us">
         </div>
         <p class="caption">Proof that we’re kinda iconic together 💕</p>
         <div class="footer">Screenshot this for proof (jk… unless? 😌)</div>
